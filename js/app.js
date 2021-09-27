@@ -5,21 +5,21 @@ const $backward = document.querySelector('#Backward');
 const $forward = document.querySelector('#Forward');
 
 
-$play.addEventListener('click', handlePlay);
 $pause.addEventListener('click', handlePause);
+$play.addEventListener('click', handlePlay);
 
 
-function handlePlay() {
-    $video.play();
-    $play.hidden = true;
-    $pause.hidden = false;
-}
 function handlePause() {
     $video.pause();
     $play.hidden = false;
     $pause.hidden = true;
 }
 
+function handlePlay() {
+    $video.play();
+    $play.hidden = true;
+    $pause.hidden = false;
+}
 $backward.addEventListener('click', handleBackward);
 $forward.addEventListener('click', handleForward);
 
