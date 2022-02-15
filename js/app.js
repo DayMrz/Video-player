@@ -17,8 +17,8 @@ function handlePlay() {
 
 function handlePause() {
     $video.pause();
-    $play.hidden = false;
     $pause.hidden = true;
+    $play.hidden = false;
 }
 
 $backward.addEventListener('click', handleBackward);
