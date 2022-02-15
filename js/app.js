@@ -5,9 +5,15 @@ const $backward = document.querySelector('#Backward');
 const $forward = document.querySelector('#Forward');
 
 
-$pause.addEventListener('click', handlePause);
 $play.addEventListener('click', handlePlay);
+$pause.addEventListener('click', handlePause);
 
+
+function handlePlay() {
+    $video.play();
+    $play.hidden = true;
+    $pause.hidden = false;
+}
 
 function handlePause() {
     $video.pause();
@@ -15,18 +21,14 @@ function handlePause() {
     $pause.hidden = true;
 }
 
-function handlePlay() {
-    $video.play();
-    $play.hidden = true;
-    $pause.hidden = false;
-}
 $backward.addEventListener('click', handleBackward);
-$forward.addEventListener('click', handleForward);
 
 function handleBackward() {
     // $video.currentTime = $video.currentTime - 10;
     $video.currentTime -= 10;
 }
+
+$forward.addEventListener('click', handleForward);
 
 function handleForward() {
     // $video.currentTime = $video.currentTime + 10;
